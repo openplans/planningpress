@@ -1,0 +1,32 @@
+/* --- THEME FORCE EVENTS (CUSTOM POST TYPE) --- */
+
+/* Columns CPT Events */
+
+th#pprss_col_ev_date, th#pprss_col_ev_cat {width:100px}
+//td.pprss_col_ev_date em{color:gray;}
+//td.pprss_col_ev_times em{color:gray;}
+th#pprss_col_ev_times{width:80px}
+th#pprss_col_ev_thumb{width:80px}
+
+th#pprss_col_menu_order{width:60px}
+td.pprss_col_menu_id{color:gray;text-align:right;}
+td.pprss_col_menu_order{color:#219b38;text-align:right;}
+th#pprss_col_menu_thumb{width:100px}
+td.pprss_col_menu_thumb img{border:1px solid #d8d8d8}
+th#pprss_col_menu_cat,th#pprss_col_menu_title,th#pprss_col_menu_size{width:150px}
+
+/* Metabox */
+
+//.pprss-meta {  }
+//.pprss-meta ul li { height: 20px; clear:both; margin: 0 0 15px 0;}
+//.pprss-meta ul li label { width: 100px; display:block; float:left; padding-top:4px; }
+//.pprss-meta ul li input { width:125px; display:block; float:left; }
+//.pprss-meta ul li em { width: 200px; display:block; float:left; color:gray; margin-left:10px; padding-top: 4px}
+
+.ui-datepicker-trigger:hover {
+    cursor: pointer;
+}
+
+.ui-widget-header .ui-icon {
+    background-image: url(../images/ui-icons_d8e7f3_256x240.png) !important;
+}
