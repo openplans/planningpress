@@ -1,0 +1,226 @@
+body {
+    background: white; 
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    color: black;
+    font-size: 10pt;
+}
+#nyc-gov-branding,
+#utility,
+#access,
+#secondary,
+#footer-nav,
+#branding #searchform,
+#slides .permalink,
+#slides .fullscreen,
+div.reply,
+a.feature-comments,
+span.expander,
+#respond,
+#footer-links,
+.comment-edit-link,
+.edit-link,
+p.printer-friendly,
+.slides-share,
+.fullscreen,
+#map-footer {
+    display: none;
+}
+a img {
+    border: none;
+}
+#branding {
+    border-bottom: 1pt solid #999999;
+    padding: 0 0 1em;
+    margin: 0 0 2em 0;
+}
+#nyc-gov-dot-home {
+    text-decoration: none;
+    color: gray;
+    font-size: 9pt;
+}
+#site-title,
+#site-title a {
+    color: black;
+    font-size: 15pt;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+#slides-nav-wrapper {
+    display: none;
+}
+ul#slides {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+ul#slides li {
+    border-bottom: 1pt solid #999999;
+    margin: 0 0 2em;
+    padding: 0 0 1em;
+}
+
+#footer {
+    border-top: 1pt solid #999999;
+    margin: 2em 0 0;
+    padding: 1em 0 0;
+}
+
+img {
+	max-width: 90%;
+	width: auto;
+	height: auto;
+}
+    * html img { 
+        /* set width for IE */
+        width: expression(this.width > 90% ? 90%: true); 
+    }
+
+
+/* =Map Stuff
+-------------------------------------------------------------- */
+#mbMap {
+    width: 570px;
+    height: 550px;
+    position: relative;
+    clear: both;
+}
+
+/* pan zoom  */
+body.page-template .olControlLayerSwitcher {
+    display: none;
+}
+body.page-template .olControlLayerSwitcher .layersDiv {
+}
+body.page-template .layer-off {
+}
+body.page-template .dataLbl {
+}
+body.page-template .olControlZoomPanel {
+    top: 10px;
+    left: 10px;
+}
+body.page-template .olControlZoomPanel div {
+    width: 24px;
+    height: 24px;
+}
+body.page-template .olControlZoomPanel .olControlZoomInItemInactive {
+    background: transparent url("img/zoom-in.png") 2px 2px no-repeat scroll;
+}
+body.page-template .olControlZoomPanel .olControlZoomToMaxExtentItemInactive {
+    display: none;
+}
+body.page-template .olControlZoomPanel .olControlZoomOutItemInactive {
+    top: 25px;
+    background: transparent url("img/zoom-out.png") 2px 2px no-repeat scroll;
+}
+
+/* layer menu  */
+body.page-template #legend {
+    background: white;
+    position: absolute; 
+    top: 33px;
+    right: 5px;
+    z-index: 3000;
+    border: 1px solid #0a9f67;
+}
+body.page-template .legend-btn {
+    position: relative;
+    cursor: pointer;
+    border-top: 1px solid #ccc;
+}
+body.page-template #btn-peds {
+    border-top: 1px solid white;
+}
+body.page-template .mapbutton {
+    color: #808080;
+    background: #fff url(img/map-tick-off.gif) 3px center no-repeat scroll;
+}
+body.page-template .mapbutton span {
+    padding: 0 6px 0 20px;
+}
+body.page-template .hovering {
+    background-color: #eaeaea;
+}
+body.page-template .legend-active .mapbutton {
+    background: #fff url(img/map-tick.gif) 3px center no-repeat scroll;
+    color: #000;
+}
+
+/* layer menu hover popup */
+body.page-template .legdrop {
+    display: none;
+    background: transparent url(img/map-menu-bubble.gif) right top no-repeat scroll;
+    border-left: 1px solid #0a9f67;
+    position: absolute;
+    right: 100%;
+    top: -10px;
+    width: 300px;
+    line-height: 16px;
+}
+body.page-template .legdrop strong {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    margin: 0 20px 0 10px;
+    padding: 5px 0 3px;
+    font-size: 12px;
+}
+body.page-template .legdrop .legdesc {
+    margin-right: 10px;
+    padding: 3px 10px 10px;
+    border-bottom: 1px solid #0a9f67;
+}
+body.page-template .legdrop p {
+    margin-bottom: 10px;
+}
+
+/* Streets|Aerial basemap buttons */
+#mbForm {
+    position: absolute;
+    top: 7px;
+    right: 2px;
+    z-index: 3000;
+}
+#mbMap .ui-widget {
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+#mbMap .ui-buttonset .ui-button {
+    font-size: 11px;
+    margin-left:0;
+    margin-right:-4px;
+}
+
+#mbMap .ui-state-default, 
+#mbMap .ui-widget-content .ui-state-default, 
+#mbMap .ui-widget-header .ui-state-default { 
+    border: 1px solid #0a9f67; 
+    background: #eaeaea; 
+    font-weight: normal; 
+    color: #808080; 
+}
+#mbMap .ui-state-active, 
+#mbMap .ui-widget-content .ui-state-active, 
+#mbMap .ui-widget-header .ui-state-active { 
+    border: 1px solid #0a9f67; 
+    background: #0a9f67; 
+    font-weight: normal; 
+    color: #fff; 
+}
+#mbMap .ui-corner-tl { -moz-border-radius-topleft: 3px; -webkit-border-top-left-radius: 3px; border-top-left-radius: 3px; }
+#mbMap .ui-corner-tr { -moz-border-radius-topright: 3px; -webkit-border-top-right-radius: 3px; border-top-right-radius: 3px; }
+#mbMap .ui-corner-bl { -moz-border-radius-bottomleft: 3px; -webkit-border-bottom-left-radius: 3px; border-bottom-left-radius: 3px; }
+#mbMap .ui-corner-br { -moz-border-radius-bottomright: 3px; -webkit-border-bottom-right-radius: 3px; border-bottom-right-radius: 3px; }
+#mbMap .ui-corner-top { -moz-border-radius-topleft: 3px; -webkit-border-top-left-radius: 3px; border-top-left-radius: 3px; -moz-border-radius-topright: 3px; -webkit-border-top-right-radius: 3px; border-top-right-radius: 3px; }
+#mbMap .ui-corner-bottom { -moz-border-radius-bottomleft: 3px; -webkit-border-bottom-left-radius: 3px; border-bottom-left-radius: 3px; -moz-border-radius-bottomright: 3px; -webkit-border-bottom-right-radius: 3px; border-bottom-right-radius: 3px; }
+#mbMap .ui-corner-right {  -moz-border-radius-topright: 3px; -webkit-border-top-right-radius: 3px; border-top-right-radius: 3px; -moz-border-radius-bottomright: 3px; -webkit-border-bottom-right-radius: 3px; border-bottom-right-radius: 3px; }
+#mbMap .ui-corner-left { -moz-border-radius-topleft: 3px; -webkit-border-top-left-radius: 3px; border-top-left-radius: 3px; -moz-border-radius-bottomleft: 3px; -webkit-border-bottom-left-radius: 3px; border-bottom-left-radius: 3px; }
+#mbMap .ui-corner-all { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+
+#mbMap .ui-button-text-only .ui-button-text {
+    padding: 2px 10px;
+}
+#content #mbMap img {
+    max-width: none;
+}
+
