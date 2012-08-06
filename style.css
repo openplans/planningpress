@@ -226,7 +226,8 @@ body {
 	text-shadow: -2px 2px 3px rgba(0,0,0,0.25);
   color: #fff;
 }
-#branding #searchform {
+#branding #searchform,
+#addthis-site-share {
   display: none;
 }
 
@@ -1571,6 +1572,16 @@ p.printer-friendly a {
   }
   #branding #searchsubmit:hover {
     background: #294d66;
+  }
+
+  /* AddThis (in the header) */
+  #addthis-site-share {
+    display: block;
+    width: 108px;
+    position: absolute;
+    top: 20px;
+    right: 50%;
+    margin-right: -509px;
   }
 
   /* Sidebar Menu */

@@ -100,7 +100,7 @@
 
       <div id="addthis-site-share">
       <?php
-      do_action('addthis_widget',site_url() , get_bloginfo('name'), 'fb_tw_p1_sc');
+      do_action('addthis_widget',site_url() , get_bloginfo('name'), 'small_toolbox');
       ?>
       </div>
 
