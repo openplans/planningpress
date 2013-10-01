@@ -7,9 +7,10 @@
 
         </div><!-- #main  -->
 
+</div><!-- #page -->
         <footer id="colophon" role="contentinfo" class="clearfix">
 
-          <div id="site-credit">
+          <div id="site-credit" class="banner banner-anchor">
             <?php
             $opt_val_colophon_text = get_option( 'pprss_colophon_text' );
             if ($opt_val_colophon_text) {
@@ -21,7 +22,7 @@
             ?>
           </div>
 
-          <nav id="footer-nav" class="clearfix" role="article">
+          <nav id="footer-nav" class="clearfix banner-inline-list banner" role="article">
             <?php wp_nav_menu( array(
                 'theme_location' => 'footer',
                 'fallback_cb'    => false
@@ -29,7 +30,6 @@
           </nav><!-- #footer-nav -->
 
         </footer><!-- #colophon -->
-</div><!-- #page -->
 
 <?php if ( is_page_template("page-map.php") ) { ?>
 <script src="<?php echo get_template_directory_uri(); ?>/leaflet/leaflet.js"></script>

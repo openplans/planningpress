@@ -94,7 +94,10 @@
         <?php wp_nav_menu( array( 'theme_location' => 'utility', 'fallback_cb' => false ) ); ?>
       </nav><!-- #utility -->
       <a href="#" id="nav-bttn">&equiv;</a>
-      <nav id="access" role="article">
+      <nav id="access" role="article" class="banner banner-inline-list">
+        <div class="banner-anchor">
+          <a id="banner-anchor-home" href="/" name="banner-anchor-home"></a>
+        </div>
         <?php wp_nav_menu( array( 'theme_location' => 'header', 'fallback_cb'    => false ) ); ?>
       </nav><!-- #access -->
 
@@ -103,7 +106,6 @@
       do_action('addthis_widget',site_url() , get_bloginfo('name'), 'small_toolbox');
       ?>
       </div>
-
 
       <?php
       $opt_val_use_header_search = get_option( 'pprss_use_header_search' );
