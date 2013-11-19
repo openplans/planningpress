@@ -882,11 +882,16 @@ function make_slideshow_handler($atts) {
   return $out;
 }
 
-if ( !is_admin() ) { // instruction to only load if it is not the admin area
+function enqueue_theme_scripts() {
     wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( 'colorbox', get_bloginfo('url') . '/wp-content/themes/planningpress/colorbox/jquery.colorbox.js', 'jquery' );
+    wp_enqueue_script( 'colorbox', get_bloginfo('stylesheet_directory') . '/colorbox/jquery.colorbox.js', 'jquery' );
 }
 
+/* =jQuery and other JavaScript stuffs
+-------------------------------------------------------------- */
+if ( !is_admin() ) { // instruction to only load if it is not the admin area
+    add_action( 'wp_enqueue_scripts', 'enqueue_theme_scripts' );
+}
 
 /**
  * Template for comments and pingbacks.

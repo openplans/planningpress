@@ -32,15 +32,17 @@ function widget_word_on_the_street($args) {
   $commenter_name = stripcslashes($options['commenter_name']);
   $comment_link = stripcslashes($options['comment_link']);
   $post_title = stripcslashes($options['post_title']);
-  $comment_excerpt = stripcslashes(apply_filters('widget_text', $options['comment_excerpt']));
+  $comment_excerpt = apply_filters('widget_text', $options['comment_excerpt']);
   $author_url = stripcslashes($options['author_url']);
+
+  $before_widget = '<li id="word-on-the-street" class="widget">';
 
   echo $before_widget;
   echo $before_title . "Featured Comment" . $after_title;
 
   ?>
-     <blockquote class="featured-comment" class="selfclear"><span class="open-quote">&#8220;</span><span class="the-quote"><?php echo $comment_excerpt; ?></span><span class="close-quote">&#8221;</span></blockquote>
-     <p class="featured-comment-footer">
+     <blockquote id="featured-comment" class="selfclear"><span class="open-quote">&#8220;</span><span class="the-quote"><?php echo $comment_excerpt; ?></span><span class="close-quote">&#8221;</span></blockquote>
+     <p id="featured-comment-footer">
        <cite><?php echo $commenter_name ?></cite><span class="comment-source">, on <a href="<?php echo $comment_link; ?>"><?php echo $post_title; ?></a></span>
      </p>
 <?php
@@ -98,7 +100,7 @@ function widget_word_on_the_street_form($commenter_name, $comment_link,
 
 add_action('template_redirect', 'widget_word_on_the_street_from_comment');
 function widget_word_on_the_street_from_comment() {
-  $wots_action = $_GET['wots'];
+  $wots_action = (in_array('wots', $_GET)) ? $_GET['wots'] : false;
   if($wots_action === "set_word" )
     {
       if (current_user_can('moderate_comments')) {
