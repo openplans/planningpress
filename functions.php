@@ -319,7 +319,7 @@ add_action ("manage_posts_custom_column", "pprss_event_custom_columns");
 // show Events meta box
 function pprss_event_create() {
     add_meta_box('pprss_event_meta', 'Event Details', 'pprss_event_meta', 'pprss_event', 'side', 'high');
-    add_meta_box('new-meta-boxes', __('MyGeoPosition.com Geotags / GeoMetatags / GeoFeedtags / GeoMicroformats', $mygpGeotagsGeoMetatags_key), 'mygpGeotagsGeoMetatags_displayMetaBox', 'pprss_event', 'normal', 'high');
+    add_meta_box('new-meta-boxes', __('MyGeoPosition.com Geotags / GeoMetatags / GeoFeedtags / GeoMicroformats'), 'mygpGeotagsGeoMetatags_displayMetaBox', 'pprss_event', 'normal', 'high');
 
 }
 add_action( 'admin_init', 'pprss_event_create' );
@@ -623,7 +623,7 @@ function cpt_icons() {
  * Map Page Template Meta Box
  */
 function add_map_opt_metabox() {
-  $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+  $post_id = in_array('post', $_GET) ? $_GET['post'] : (in_array('post_ID', $_POST)) ? $_POST['post_ID'] : false;
   $template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
   if ($template_file == 'page-map.php') {
     add_meta_box( 'map_opt-metabox', __( 'Map Template Options' ), 'map_opt_metabox', 'page', 'side', 'default' );
@@ -811,7 +811,7 @@ function pprssslides_featured_txt_change( $content ) {
 add_filter( 'gettext', 'pprssslides_use_featured', 9999, 4 );
 add_filter( 'ngettext', 'pprssslides_use_featured', 9999, 4 );
 function pprssslides_use_featured( $translation, $text, $domain ) {
-  if ( 'pprss_slide' == $GLOBALS['post_type'] ) {
+  if ( 'pprss_slide' == get_post_type() ) {
     $translations = &get_translations_for_domain( $domain );
     if ( $text == 'Use as featured image' ) {
       return $translations->translate( 'Use as image' );

@@ -156,9 +156,9 @@ function the_word_link($comment_text)
   return $comment_text . $o;
 }
 
-add_filter('edit_comment_link', the_word_link);
+add_filter('edit_comment_link', 'the_word_link');
 
-register_sidebar_widget(array("Featured Comment", 'widgets'), 'widget_word_on_the_street');
-register_widget_control(array("Featured Comment", 'widgets'), 'widget_word_on_the_street_control', 500, 500);
+wp_register_sidebar_widget( 'widget-featured-comment', "Featured Comment", 'widget_word_on_the_street');
+wp_register_widget_control( 'widget-featured-comment', "Featured Comment", 'widget_word_on_the_street_control', 500, 500);
 
 ?>
