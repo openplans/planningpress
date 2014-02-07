@@ -1,8 +1,7 @@
-planningpress
-=============
+## PlanningPress
 
-PlanningPress is a web toolkit for inclusive, responsive, authentic citizen engagement in transportation planning.  This repository contains the theme files for a Wordpress instance. For full functionality, it also requires planningpress-plugins repo installed in the plugins directory of Wordpress.
+PlanningPress is a WordPress-based toolkit for inclusive, responsive, authentic citizen engagement in transportation planning. OpenPlans is no longer actively working on PlanningPress. We've taken everything we learned from this project, and applied it to [Plan In A Box](http://openplans.org/work/plan-in-a-box/). If you're interested in using the web to engage citizens, check out [Plan In A Box](http://openplans.org/work/plan-in-a-box/).
 
-To chat about PlanningPress and website for planning more generally, [join our Google Group](https://groups.google.com/forum/?fromgroups#!forum/planningpress-dev).
+#### What's here?
 
-Read more about PlanningPress at [openplans.org](http://openplans.org/work/planningpress/).
+This repository contains the theme files for a Wordpress instance. For full functionality, it also requires planningpress-plugins repo installed in the plugins directory of Wordpress.
